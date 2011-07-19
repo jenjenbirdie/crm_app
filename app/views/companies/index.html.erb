@@ -1,0 +1,45 @@
+<div id="company_list">
+<h1>Company Summary</h1>
+
+<table>
+<tr>
+	<b><td>Company</td>
+	<td>Company Type</td>
+	<td>Customer Type</td>
+	<td>Industry</td>
+	<td>TIN</td>
+</tr>
+
+<% @companies.each do |company| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+  
+    <td>
+		<p><%= company.companyName %></p>
+	</td>
+    <td>
+		<p><%= company.companyType %></p>
+	</td>
+	<td>
+		<p><%= company.customerType %></p>
+	</td>
+	<td>
+		<p><%= company.industry %></p>
+	</td>
+	<td>
+		<p><%= company.tinNo %></p>
+	</td>
+		
+    <td class = "list_actions">
+		<%= link_to 'Show ', company %>
+		<%= link_to 'Edit ', edit_company_path(company) %>
+		<%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'New Company', new_company_path %>
+
