@@ -3,6 +3,15 @@ require 'test_helper'
 class CompaniesControllerTest < ActionController::TestCase
   setup do
     @company = companies(:one)
+	@update = {
+		:companyName => 'Unicorn Tech',
+		:companyType => 'Parent',
+		:customerType => 'Customer',
+		:industry => 'Software',
+		:tinNo => '222-4444-999',
+		:vip => 'Low',
+		:description => 'This company is doing really well.'		
+	}
   end
 
   test "should get index" do
@@ -18,7 +27,7 @@ class CompaniesControllerTest < ActionController::TestCase
 
   test "should create company" do
     assert_difference('Company.count') do
-      post :create, :company => @company.attributes
+      post :create, :company => @update
     end
 
     assert_redirected_to company_path(assigns(:company))
@@ -35,7 +44,7 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   test "should update company" do
-    put :update, :id => @company.to_param, :company => @company.attributes
+    put :update, :id => @company.to_param, :company => @update
     assert_redirected_to company_path(assigns(:company))
   end
 
