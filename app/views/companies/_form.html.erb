@@ -12,32 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :companyName %><br />
-    <%= f.text_field :companyName %>
+    <%= label_tag  'Company Name' %><br />
+    <%= f.text_field :companyName, :size => 60 %>
   </div>
   <div class="field">
-    <%= f.label :companyType %><br />
-    <%= f.text_field :companyType %>
+    <%= label_tag  'Company Type' %><br />
+    <%= f.select :companyType, Company::COMPANY_TYPES,
+		:prompt => 'Choose a value' %>
   </div>
   <div class="field">
-    <%= f.label :customerType %><br />
-    <%= f.text_field :customerType %>
+    <%= label_tag  'Customer Type' %><br />
+    <%= f.select :customerType, Company::CUSTOMER_TYPES,
+		:prompt => 'Choose a value' %>
   </div>
   <div class="field">
-    <%= f.label :industry %><br />
-    <%= f.text_field :industry %>
+    <%= label_tag  'Industry' %><br />
+    <%= f.select :industry, Company::INDUSTRY_TYPES,
+		:prompt => 'Choose a value' %>
   </div>
   <div class="field">
-    <%= f.label :tinNo %><br />
-    <%= f.text_field :tinNo %>
+    <%= label_tag  'TIN No.' %><br />
+    <%= f.text_field :tinNo, :size => 12 %>
   </div>
   <div class="field">
-    <%= f.label :vip %><br />
-    <%= f.text_field :vip %>
+    <%= label_tag  'VIP' %><br />
+    <%= f.select :vip, Company::VIP_TYPES,
+		:prompt => 'Choose a value' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :rows => 6 %>
+    <%= label_tag  'Description' %><br />
+    <%= f.text_area :description, :rows => 6, :cols => 50 %>
   </div>
   <div class="actions">
     <%= f.submit %>

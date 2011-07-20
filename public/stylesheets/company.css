@@ -1,6 +1,6 @@
 /* Global styles */
 
-#store #notice {
+#company #notice {
         color: #000;
         border: 2px solid red;
         padding: 1em;
@@ -10,7 +10,7 @@
 }
 
 
-#store h1 {
+#company h1 {
         font:  150% sans-serif;
         color: #226;
         border-bottom: 3px dotted #77d;
@@ -66,18 +66,18 @@
 
 /* An entry in the store catalog */
 
-#store  .entry {
+#company  .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#company  .title {
   font-size: 120%;
   font-family: sans-serif;
 }
 
-#store .entry img {
+#company .entry img {
   width: 80px;
   margin-right: 5px;
   margin-bottom: 5px;
@@ -85,33 +85,33 @@
 }
 
 
-#store .entry h3 {
+#company .entry h3 {
  margin-top: 0;
  margin-bottom: 2px;
  color: #227;
 }
 
-#store .entry p {
+#company .entry p {
  margin-top: 0.5em; 
  margin-bottom: 0.8em; 
 }
 
-#store .entry .price_line {
+#company .entry .price_line {
  clear: both;
  margin-bottom: 0.5em;
 }
 
-#store .entry .add_to_cart {
+#company .entry .add_to_cart {
   position: relative;
 }
 
-#store .entry  .price {
+#company .entry  .price {
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
 }
 
-#store .entry  form, #store .entry form div {
+#company.entry  form, #company .entry form div {
   display: inline;
 }
 
@@ -161,15 +161,15 @@
 /* START:cartmain */
 /* Styles for the cart in the main page */
 
-#store .cart_title {
+#company .cart_title {
   font: 120% bold;
 }
 
-#store .item_price, #store .total_line {
+#company .item_price, #company .total_line {
   text-align: right;
 }
 
-#store .total_line .total_cell {
+#company .total_line .total_cell {
   font-weight: bold;
   border-top: 1px solid #595;
 }
@@ -192,18 +192,18 @@
 /* START:form */
 /* Styles for order form */
 
-.depot_form fieldset {
+.company_form fieldset {
   background: #efe;
 }
 
-.depot_form legend {
+.company_form legend {
   color: #dfd;
   background: #141;
   font-family: sans-serif;
   padding: 0.2em 1em;
 }
 
-.depot_form label {
+.company_form label {
   width: 5em;
   float: left;
   text-align: right;
@@ -212,15 +212,15 @@
   display: block;
 }
 
-.depot_form select, .depot_form textarea, .depot_form input {
+.company_form select, .company_form textarea, .company_form input {
   margin-left: 0.5em;
 }
 
-.depot_form .submit {
+.company_form .submit {
   margin-left: 4em;
 }
 
-.depot_form div {
+.company_form div {
   margin: 0.5em 0;
 }
 /* END:form */
