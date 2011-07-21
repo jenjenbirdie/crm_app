@@ -1,0 +1,63 @@
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+
+
+<p>
+  <b>Salutation:</b>
+  <%= @individual.salutation %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @individual.firstName %>
+</p>
+
+<p>
+  <b>Middlename:</b>
+  <%= @individual.middleName %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @individual.lastName %>
+</p>
+
+<p>
+  <b>Suffix:</b>
+  <%= @individual.suffix %>
+</p>
+
+<p>
+  <b>Department:</b>
+  <%= @individual.department %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @individual.position %>
+</p>
+
+<p>
+  <b>Positiondesc:</b>
+  <%= @individual.positionDesc %>
+</p>
+
+<p>
+  <b>Contacttype:</b>
+  <%= @individual.contactType %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @individual.description %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @individual.company_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_individual_path(@individual) %> |
+<%= link_to 'Back', individuals_path %>

@@ -1,0 +1,61 @@
+<div id="company_list">
+<h1>Individual Summary</h1>
+
+<table>
+  <tr>
+    <th>Salutation</th>
+    <th>Firstname</th>
+    <th>Middlename</th>
+    <th>Lastname</th>
+    <th>Suffix</th>
+    <th>Department</th>
+    <th>Position</th>
+    <th>Contact Type</th>
+    <th>Company</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @individuals.each do |individual| %>
+  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    <td>
+		<p><%= individual.salutation %></p>
+	</td>
+	<td>
+		<p><%= individual.firstName %></p>
+	</td>
+	<td>
+		<p><%= individual.middleName %></p>
+	</td>
+	<td>
+		<p><%= individual.lastName %></p>
+	</td>
+	<td>
+		<p><%= individual.suffix %></p>
+	</td>
+	<td>
+		<p><%= individual.department %></p>
+	</td>
+	<td>
+		<p><%= individual.position %></p>
+	</td>
+	<td>
+		<p><%= individual.contactType %></p>
+	</td>
+	<td>
+		<p><%= individual.company_id %></p>
+	</td>
+	<td class = "list_actions">
+		<%= link_to 'Show', individual %>
+		<%= link_to 'Edit', edit_individual_path(individual) %>
+		<%= link_to 'Destroy', individual, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'New Individual', new_individual_path %>
