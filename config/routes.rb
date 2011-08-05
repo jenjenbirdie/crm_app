@@ -1,7 +1,8 @@
 CrmApp::Application.routes.draw do
-  resources :individuals
-
-  resources :companies
+  
+  resources :companies do
+	resources :individuals 
+  end
   
   get "companies/index"
 

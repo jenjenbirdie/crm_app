@@ -1,4 +1,6 @@
 class Individual < ActiveRecord::Base
+    
+	belongs_to :company
 	validates :firstName, :lastName, :department, :position, :contactType, :presence => true
 	
 	DEPARTMENT_TYPES = ["Admin", "IT", "Finance", "Development", "QA", "Others"]

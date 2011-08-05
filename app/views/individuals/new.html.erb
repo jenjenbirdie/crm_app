@@ -1,5 +1,53 @@
-<h1>New individual</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', individuals_path %>
+<%= form_for([@company, @company.individuals.new]) do |f| %>  
+  <div class="field">
+    <%= label_tag  'Salutation' %><br />
+    <%= f.text_field :salutation %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Firstname' %><br />
+    <%= f.text_field :firstName %>
+  </div>
+  <div class="field">
+    <%= label_tag 'Middlename' %><br />
+    <%= f.text_field :middleName %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Lastname' %><br />
+    <%= f.text_field :lastName %>
+  </div>
+  <div class="field">
+    <%= label_tag  'suffix' %><br />
+    <%= f.text_field :suffix %>
+  </div>
+  
+  <div class="field">
+    <%= label_tag  'Department' %><br />
+	<%= f.select :department, Individual::DEPARTMENT_TYPES,
+		:prompt => 'Choose a value' %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Position' %><br />
+    <%= f.select :position, Individual::POSITION_TYPES,
+		:prompt => 'Choose a value' %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Other Position Description' %><br />
+    <%= f.text_field :positionDesc %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Contact Type' %><br />
+        <%= f.select :contactType, Individual::CONTACT_TYPES,
+		:prompt => 'Choose a value' %>
+  </div>
+  <div class="field">
+    <%= label_tag  'Description' %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

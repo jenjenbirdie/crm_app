@@ -11,7 +11,7 @@ class CreateIndividuals < ActiveRecord::Migration
       t.string :positionDesc
       t.string :contactType
       t.text :description
-      t.integer :company_id
+      t.referenced :company_id
 
       t.timestamps
     end

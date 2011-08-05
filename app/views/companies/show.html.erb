@@ -37,6 +37,11 @@
   <%= @company.description %>
 </p>
 
-
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
+
+<h3>Individual</h3>
+<div id="individual">
+	<%= render @company.individuals %>
+</div>
+<%= render :file => 'individuals/new' %>

@@ -1,4 +1,4 @@
-<%= form_for(@individual) do |f| %>
+<%= form_for (@individual) do |f| %>
   <% if @individual.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@individual.errors.count, "error") %> prohibited this individual from being saved:</h2>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+    <div class="field">
     <%= label_tag  'Salutation' %><br />
     <%= f.text_field :salutation %>
   </div>
@@ -31,6 +31,7 @@
     <%= label_tag  'suffix' %><br />
     <%= f.text_field :suffix %>
   </div>
+  
   <div class="field">
     <%= label_tag  'Department' %><br />
 	<%= f.select :department, Individual::DEPARTMENT_TYPES,
@@ -61,4 +62,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
+

@@ -1,4 +1,7 @@
 class Company < ActiveRecord::Base
+
+	has_many :individuals
+
 	validates :companyName, :customerType, :industry, :presence => true
 	validates :companyName, :uniqueness => true
 	

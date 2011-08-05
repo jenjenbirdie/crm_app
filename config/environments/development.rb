@@ -22,5 +22,22 @@ CrmApp::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  #email
+  # added 08/01/2011
+  config.action_mailer.delivery_method = :smtp
+  # New Gmail SMTP server setup
+  # ActionMailer::Base.smtp_settings = {    
+  config.action_mailer.smtp_settings = {
+	:address => "smtp.gmail.com",    
+	:enable_starttls_auto => true,    
+	:port => 587,   
+	:domain => "gmail.com",
+	:authentication => "plain",    
+	:user_name => "jbernardino66@gmail.com",    
+	:password => 'thisisatest',
+	:enable_starttls_auto => true
+	} 
+  
 end
 
