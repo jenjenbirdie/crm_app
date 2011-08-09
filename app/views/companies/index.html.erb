@@ -14,23 +14,24 @@
   <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
   
     <td>
-		<p><%= company.companyName %></p>
+		<!-- <p><%= company.companyName %></p> orig -->
+		<%= link_to company.companyName, company %>
 	</td>
     <td>
-		<p><%= company.companyType %></p>
+		<%= link_to company.companyType, company %>
 	</td>
 	<td>
-		<p><%= company.customerType %></p>
+		<%= link_to company.customerType, company %>
 	</td>
 	<td>
-		<p><%= company.industry %></p>
+		<%= link_to company.industry, company %>
 	</td>
 	<td>
-		<p><%= company.tinNo %></p>
+		<%= link_to company.tinNo, company %>
 	</td>
 		
     <td class = "list_actions">
-		<%= link_to 'Show ', company %>
+		<!-- <%= link_to 'Show ', company %> -->
 		<%= link_to 'Edit ', edit_company_path(company) %>
 		<%= link_to 'Destroy', company, :confirm => 'Are you sure?', :method => :delete %>
 	</td>

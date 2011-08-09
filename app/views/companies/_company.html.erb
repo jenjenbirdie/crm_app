@@ -1,6 +1,6 @@
 <%= div_for company do %> 
  <h3>
-	<%= link_to company.companyName, company %>
+	<%= link_to company.companyname, company %>
 	<span class='actions'>
 		<%= link_to "Edit", edit_company_path(company) %>
 		<%= link_to "Delete", company, :confirm => "Are you sure?", 

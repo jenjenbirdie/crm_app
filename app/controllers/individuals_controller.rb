@@ -36,7 +36,8 @@ class IndividualsController < ApplicationController
 
   # GET /individuals/1/edit
   def edit
-    @individual = Individual.find(params[:id])
+    #@individual = Individual.find(params[:id])
+	@individual = @company.individuals.find(params[:id])
   end
 
   # POST /individuals
@@ -64,7 +65,10 @@ class IndividualsController < ApplicationController
   # PUT /individuals/1
   # PUT /individuals/1.xml
   def update
-    @individual = Individual.find(params[:id])
+    #@individual = Individual.find(params[:id])
+	@individual = @company.individuals.new(params[:individual])
+	
+	
 	#@individual = @company.individuals.find(params[:id])
 
    #if @individual.save
